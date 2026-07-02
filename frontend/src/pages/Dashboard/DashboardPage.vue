@@ -4,7 +4,7 @@
     <div class="page-header">
       <div>
         <h1 class="page-title">Dashboard</h1>
-        <p class="page-subtitle">{{ greeting }}, Admin! Here's what's happening today.</p>
+        <p class="page-subtitle">{{ greeting }}, Admin! Welcome to Sovannaphumi School dashboard.</p>
       </div>
       <div class="flex items-center gap-2 text-xs text-dark-400 glass-card px-4 py-2">
         <Calendar class="w-5 h-5 text-current" /> {{ todayFull }}

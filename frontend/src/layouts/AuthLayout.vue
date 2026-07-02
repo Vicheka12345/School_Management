@@ -14,11 +14,16 @@
     <div class="relative z-10 w-full max-w-md px-4 animate-slide-up">
       <!-- Logo -->
       <div class="text-center mb-8">
-        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-purple mb-4 shadow-glow">
-          <School class="w-8 h-8 text-white" />
+        <div class="inline-flex items-center justify-center w-20 h-20 mb-4">
+          <img 
+            src="/logo-sovannaphumi.svg" 
+            alt="Sovannaphumi School Logo" 
+            class="w-20 h-20 object-contain"
+          />
         </div>
-        <h1 class="text-2xl font-bold text-white">School Management</h1>
-        <p class="text-dark-400 text-sm mt-1">Academic Year 2025-2026</p>
+        <h1 class="text-2xl font-bold text-white dark:text-white text-dark-900">Sovannaphumi School</h1>
+        <p class="text-sm font-medium text-dark-400 dark:text-dark-400 text-dark-600 mt-1">Management System</p>
+        <p class="text-xs text-dark-500 dark:text-dark-500 text-dark-500 mt-1">Academic Year 2025-2026</p>
       </div>
 
       <router-view />
@@ -27,5 +32,5 @@
 </template>
 
 <script setup>
-import { School } from 'lucide-vue-next'
+// No imports needed for the logo
 </script>

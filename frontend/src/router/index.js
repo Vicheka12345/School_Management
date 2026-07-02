@@ -47,4 +47,25 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
+router.afterEach((to) => {
+  // Update document title with school branding
+  const routeNames = {
+    Login: 'Login',
+    ForgotPassword: 'Forgot Password',
+    Dashboard: 'Dashboard',
+    Students: 'Students',
+    StudentDetail: 'Student Details',
+    Teachers: 'Teachers',
+    Classes: 'Classes',
+    Payments: 'Payments',
+    Attendance: 'Attendance',
+    Reports: 'Reports',
+    Settings: 'Settings',
+    Profile: 'Profile'
+  }
+  
+  const pageTitle = routeNames[to.name] || 'Sovannaphumi School'
+  document.title = `${pageTitle} - Sovannaphumi School`
+})
+
 export default router

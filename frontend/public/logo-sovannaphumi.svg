@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .outer-ring { fill: #1e7ba8; stroke: #fbbf24; stroke-width: 3; }
+      .inner-circle { fill: #b91c3c; }
+      .crown { fill: #fbbf24; stroke: #1e7ba8; stroke-width: 1; }
+      .book { fill: white; stroke: #1e7ba8; stroke-width: 1; }
+      .book-pages { fill: #fbbf24; }
+      .laurel { fill: #fbbf24; }
+      .text-main { fill: white; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; }
+      .text-small { fill: #fbbf24; font-family: Arial, sans-serif; font-size: 7px; }
+    </style>
+  </defs>
+  
+  <!-- Decorative outer ring with scalloped edges -->
+  <g transform="translate(100,100)">
+    <!-- Scalloped outer border -->
+    <path d="M-85,0 Q-85,-20 -65,-35 Q-45,-50 -30,-65 Q-15,-85 0,-85 Q15,-85 30,-65 Q45,-50 65,-35 Q85,-20 85,0 Q85,20 65,35 Q45,50 30,65 Q15,85 0,85 Q-15,85 -30,65 Q-45,50 -65,35 Q-85,20 -85,0 Z" 
+          class="outer-ring"/>
+    
+    <!-- Inner red circle -->
+    <circle cx="0" cy="0" r="60" class="inner-circle"/>
+    
+    <!-- Royal crown/temple at top -->
+    <g class="crown" transform="translate(0,-30)">
+      <!-- Crown base -->
+      <rect x="-20" y="0" width="40" height="8" rx="2"/>
+      <!-- Crown points -->
+      <path d="M-18,-8 L-12,-18 L-6,-12 L0,-18 L6,-12 L12,-18 L18,-8 Z"/>
+      <!-- Central ornament -->
+      <circle cx="0" cy="-12" r="3"/>
+      <path d="M0,-18 L-2,-20 L2,-20 Z"/>
+    </g>
+    
+    <!-- Open book in center -->
+    <g transform="translate(0,0)">
+      <!-- Book cover -->
+      <ellipse cx="0" cy="0" rx="22" ry="12" class="book"/>
+      <!-- Book binding -->
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#b91c3c" stroke-width="2"/>
+      <!-- Book pages -->
+      <path d="M-20,-8 Q-10,-10 0,-8 Q10,-10 20,-8 Q10,0 0,2 Q-10,0 -20,-8 Z" class="book-pages"/>
+      <!-- Text lines on book -->
+      <line x1="-15" y1="-4" x2="15" y2="-4" stroke="#b91c3c" stroke-width="0.5"/>
+      <line x1="-15" y1="-1" x2="12" y2="-1" stroke="#b91c3c" stroke-width="0.5"/>
+      <line x1="-15" y1="2" x2="10" y2="2" stroke="#b91c3c" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Laurel branches -->
+    <g class="laurel">
+      <!-- Left branch -->
+      <path d="M-35,15 Q-40,20 -35,25 Q-30,30 -25,25 Q-30,20 -35,15"/>
+      <path d="M-32,18 Q-27,23 -22,18 Q-27,13 -32,18"/>
+      <path d="M-29,21 Q-24,26 -19,21 Q-24,16 -29,21"/>
+      
+      <!-- Right branch -->
+      <path d="M35,15 Q40,20 35,25 Q30,30 25,25 Q30,20 35,15"/>
+      <path d="M32,18 Q27,23 22,18 Q27,13 32,18"/>
+      <path d="M29,21 Q24,26 19,21 Q24,16 29,21"/>
+    </g>
+    
+    <!-- Khmer text at top (simplified) -->
+    <text x="0" y="-70" text-anchor="middle" class="text-small">សាលាវិទ្យាល័យសុវណ្ណភូមិ</text>
+    
+    <!-- English text at bottom -->
+    <text x="0" y="50" text-anchor="middle" class="text-main">SOVANNAPHUMI</text>
+    <text x="0" y="62" text-anchor="middle" class="text-small">SCHOOL</text>
+  </g>
+</svg>

@@ -9,19 +9,23 @@
       ]"
     >
       <!-- Logo -->
-      <div class="flex items-center gap-3 px-4 py-5 border-b border-dark-700/40">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-purple flex items-center justify-center flex-shrink-0 shadow-glow-sm">
-          <School class="w-5 h-5 text-white" />
+      <div class="flex items-center gap-3 px-4 py-5 sidebar-border-bottom">
+        <div class="w-10 h-10 flex items-center justify-center flex-shrink-0">
+          <img 
+            src="/logo-sovannaphumi.svg" 
+            alt="Sovannaphumi School Logo" 
+            class="w-10 h-10 object-contain"
+          />
         </div>
         <Transition name="fade">
           <div v-if="!ui.sidebarCollapsed" class="overflow-hidden">
-            <p class="text-sm font-bold text-white leading-tight">Sovannaphumi </p>
-            <p class="text-xs text-dark-400">Admin Panel</p>
+            <p class="text-sm font-bold sidebar-title leading-tight">Sovannaphumi School</p>
+            <p class="text-xs sidebar-subtitle">Admin Panel</p>
           </div>
         </Transition>
         <button
           @click="ui.collapseSidebar()"
-          class="ml-auto text-dark-400 hover:text-white transition-colors flex-shrink-0"
+          class="ml-auto sidebar-collapse-btn transition-colors flex-shrink-0"
         >
           <svg class="w-4 h-4" :class="ui.sidebarCollapsed ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
@@ -85,37 +89,37 @@
     <!-- Main content -->
     <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
       <!-- Topbar -->
-      <header class="flex-shrink-0 h-16 flex items-center px-6 gap-4 border-b border-dark-700/40 bg-dark-900/50 backdrop-blur-md">
-        <button @click="ui.toggleSidebar()" class="lg:hidden text-dark-400 hover:text-white">
+      <header class="topbar-header flex-shrink-0 h-16 flex items-center px-6 gap-4 border-b transition-all duration-300">
+        <button @click="ui.toggleSidebar()" class="topbar-button lg:hidden">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
 
         <!-- Breadcrumb -->
-        <div class="flex items-center gap-2 text-sm text-dark-400">
-          <MapPin class="w-4 h-4 text-dark-600" />
-          <span class="text-white font-medium">{{ currentPageName }}</span>
+        <div class="flex items-center gap-2 text-sm">
+          <MapPin class="w-4 h-4 topbar-date" />
+          <span class="topbar-text font-medium">{{ currentPageName }}</span>
         </div>
 
         <div class="ml-auto flex items-center gap-3">
           <!-- Date -->
-          <span class="hidden sm:block text-xs text-dark-500">{{ todayFormatted }}</span>
+          <span class="hidden sm:block text-xs topbar-date">{{ todayFormatted }}</span>
 
           <!-- Theme Toggle -->
-          <button @click="ui.toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-xl bg-dark-800/60 border border-dark-700/50 text-dark-400 hover:text-white hover:border-dark-600 transition-all">
+          <button @click="ui.toggleTheme()" class="topbar-icon-button">
             <Sun v-if="ui.isDark" class="w-4 h-4" />
             <Moon v-else class="w-4 h-4" />
           </button>
 
           <!-- Notifications -->
-          <button class="relative w-9 h-9 flex items-center justify-center rounded-xl bg-dark-800/60 border border-dark-700/50 text-dark-400 hover:text-white hover:border-dark-600 transition-all">
+          <button class="topbar-icon-button relative">
             <Bell class="w-4 h-4" />
             <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
           </button>
 
           <!-- Logout -->
-          <button @click="handleLogout" class="w-9 h-9 flex items-center justify-center rounded-xl bg-dark-800/60 border border-dark-700/50 text-dark-400 hover:text-red-400 hover:border-red-500/30 transition-all">
+          <button @click="handleLogout" class="topbar-icon-button hover:text-red-500 dark:hover:text-red-400">
             <LogOut class="w-4 h-4" />
           </button>
         </div>
